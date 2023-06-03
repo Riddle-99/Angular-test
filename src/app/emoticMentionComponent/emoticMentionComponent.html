@@ -1,0 +1,17 @@
+<input type="text"
+    [mentionConfig]="mentionConfig"
+    [mentionListTemplate]="mentionListTemplate"
+    placeholder="Type '/' or '#' to show commands"
+    class="slack-input"
+>
+
+<ng-template #mentionListTemplate let-item="item">
+    <div class="mention-list-item">
+        <!-- <img class="mention-img" src={{item.img}} style="width:24px; height:24px"></div> -->
+        <div class="mention-icon">{{item.icon}}</div>
+        <div class="mention-details">
+            <div class="mention-name">{{item.name}}</div>
+            <div class="mention-description">{{item.description}}</div>
+        </div>
+    </div>
+</ng-template>
